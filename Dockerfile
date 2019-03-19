@@ -1,4 +1,4 @@
-FROM carlyishere/stk_cis:latest
+FROM carlyishere/stk_cis
 
 ARG LDLIBRARYPATH=/home/stk11.5.0/bin:$LDLIBRARYPATH
 ENV LD_LIBRARY_PATH=$LDLIBRARYPATH
