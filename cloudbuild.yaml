@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  id: getdocker
+  id: runDockerfile
   args:
   - 'build'
   - '-t'
@@ -18,7 +18,7 @@ artifacts:
   objects:
     #location: 'gs://testing-stk-cis/cpts423seniorproject'
     location: 'gs://testing-stk-cis/test1'
-    paths: ['*.txt']
+    paths: ['*.*', '*']
     #paths: ['*.txt', '*.log']
 
 
