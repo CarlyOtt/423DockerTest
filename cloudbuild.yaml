@@ -1,8 +1,13 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
+  args:
+  - 'build'
+  - '-t'
+  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1'
+  - '--file=Dockerfile'
+  - '.'
   #args: ['build', '-t', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1', '.']
-  args: ['build', '-t', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1', '--build-arg', 'LD_LIBRARY_PATH=/home/stk11.5.0/bin', '--build-arg', 'STK_INSTALL_DIR=/home/stk11.5.0', '--build-arg', 'STK_CONFIG_DIR=/home/user_info/STK11', '--build-arg', 'JAVA_HOME=/usr/lib/jvm/java-11-oracle', '--build-arg', 'ANT_HOME=/home/ANT/ANT', '--build-arg', 'PATH=${ANT_HOME}/bin:${JAVA_HOME}/bin:${PATH}' ,'.']
-  #args: ['build', '-t', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest', '.']
+  #args: ['build', '-t', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1', '--build-arg', 'LD_LIBRARY_PATH=/home/stk11.5.0/bin', '--build-arg', 'STK_INSTALL_DIR=/home/stk11.5.0', '--build-arg', 'STK_CONFIG_DIR=/home/user_info/STK11', '--build-arg', 'JAVA_HOME=/usr/lib/jvm/java-11-oracle', '--build-arg', 'ANT_HOME=/home/ANT/ANT', '--build-arg', 'PATH=${ANT_HOME}/bin:${JAVA_HOME}/bin:${PATH}' ,'.']
 - name: 'script-runner' 
   args: ['bash', '/home/ANT/ANT/bin/ant', '-buildfile', '/home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View']
   #args: ['bash', '/home/ANT/ANT/bin/ant', '-buildfile', '/home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View', 'ant run']
