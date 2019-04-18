@@ -3,7 +3,7 @@ steps:
   args: ['build', '-t', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1', '.']
   #args: ['build', '-t', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest', '.']
   env:
-  - 'LD_LIBRARY_PATH=/home/stk11.5.0/bin:$LD_LIBRARY_PATH'
+  - 'LD_LIBRARY_PATH=/home/stk11.5.0/bin'
   - 'STK_INSTALL_DIR=/home/stk11.5.0'
   - 'STK_CONFIG_DIR=/home/user_info/STK11'
   - 'JAVA_HOME=/usr/lib/jvm/java-11-oracle'
