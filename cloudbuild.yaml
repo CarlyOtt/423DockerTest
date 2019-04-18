@@ -7,10 +7,10 @@ steps:
   - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1'
   - '--file=Dockerfile'
   - '.'
-- name: 'script-runner' 
-  waitFor:
-    - getdocker
-  args: ['bash', '/home/ANT/ANT/bin/ant', '-buildfile', '/home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View']
+#- name: 'script-runner' 
+  #waitFor:
+    #- getdocker
+  #args: ['bash', '/home/ANT/ANT/bin/ant', '-buildfile', '/home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View']
 tags: ['testing1.1']
 images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1']
 #storing artifacts in Cloud Storage
