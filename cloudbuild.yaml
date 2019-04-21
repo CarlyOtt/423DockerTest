@@ -4,28 +4,26 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1'
+  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest'
+  #- 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1'
   - '--file=Dockerfile'
   - '.'
-#- name: 'script-runner' 
-  #waitFor:
-    #- getdocker
-  #args: ['bash', '/home/ANT/ANT/bin/ant', '-buildfile', '/home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View']
-tags: ['testing1.1']
-images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1']
+tags: ['testing1.2']
+images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
+#images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1']
 #storing artifacts in Cloud Storage
 artifacts:
   objects:
     #location: 'gs://testing-stk-cis/cpts423seniorproject'
     location: 'gs://testing-stk-cis/test1'
-    paths: ['*.txt']
+    paths: ['*.*']
     #paths: ['*.txt', '*.log']
 
 
 #To store an image as part of your build flow and 
 #to display the image in the build results:
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  id: store image and display build results
-  args: ['push', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
-images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
+#steps:
+#- name: 'gcr.io/cloud-builders/docker'
+#  id: store image and display build results
+#  args: ['push', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
+#images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
