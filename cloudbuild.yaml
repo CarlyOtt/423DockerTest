@@ -18,10 +18,14 @@ artifacts:
   objects:
     #location: 'gs://testing-stk-cis/cpts423seniorproject'
     location: 'gs://testing-stk-cis/test1'
-    paths: ['*.*', '*']
+    paths: ['*.txt']
     #paths: ['*.txt', '*.log']
 
 
-
-#FROM carlyishere/stk_cis:updated1
-#CMD /home/ANT/ANT/bin/ant -buildfile /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View
+#To store an image as part of your build flow and 
+#to display the image in the build results:
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  id: store image and display build results
+  args: ['push', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
+images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
