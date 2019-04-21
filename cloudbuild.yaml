@@ -4,13 +4,12 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest'
-  #- 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1'
+  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest'
   - '--file=Dockerfile'
   - '.'
 tags: ['testing1.2']
-images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
-#images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1']
+#images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
+images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
 #storing artifacts in Cloud Storage (creates it in Buckets under 'Storage')
 artifacts:
   objects:
