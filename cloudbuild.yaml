@@ -11,11 +11,12 @@ steps:
 tags: ['testing1.2']
 images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
 #images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:test1']
-#storing artifacts in Cloud Storage
+#storing artifacts in Cloud Storage (creates it in Buckets under 'Storage')
 artifacts:
   objects:
     #location: 'gs://testing-stk-cis/cpts423seniorproject'
-    location: 'gs://testing-stk-cis/test1'
+    #location: 'gs://testing-stk-cis/test1'
+    location: 'gs://testing-stk-cis/test2'
     paths: ['*.*']
     #paths: ['*.txt', '*.log']
 
