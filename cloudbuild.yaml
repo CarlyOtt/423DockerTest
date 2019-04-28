@@ -16,8 +16,9 @@ artifacts:
     #location: 'gs://testing-stk-cis/cpts423seniorproject'
     #location: 'gs://testing-stk-cis/test1'
     location: 'gs://testing-stk-cis/test2'
-    paths: ['report.txt', 'reportArea.txt']
-    #paths: ['*.txt', '*.log']
+    paths: ['*.txt']
+    #paths: ['report.txt', 'reportArea.txt']
+    #paths: ['*.*']
 
 
 #To store an image as part of your build flow and 
