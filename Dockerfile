@@ -14,5 +14,6 @@ ENV ANT_HOME=$ANTHOME
 ARG PATHH=${ANT_HOME}/bin:${JAVA_HOME}/bin:${PATH}
 ENV PATH=$PATHH
 
+RUN cd /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool
 RUN javac Main.java
 CMD java Main.java
