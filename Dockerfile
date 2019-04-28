@@ -15,5 +15,5 @@ ARG PATHH=${ANT_HOME}/bin:${JAVA_HOME}/bin:${PATH}
 ENV PATH=$PATHH
 
 RUN cd /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool
-RUN javac Main.java
-CMD java Main.java
+RUN javac -cp "/home/carly/Documents/STK_files/STKEngUnix1150/stk11.5.0/bin/agi.core.jar" Main.java
+CMD java -cp "/home/carly/Documents/STK_files/STKEngUnix1150/stk11.5.0/bin/agi.core.jar" Main
