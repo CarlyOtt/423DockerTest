@@ -15,4 +15,3 @@ ARG PATHH=${ANT_HOME}/bin:${JAVA_HOME}/bin:${PATH}
 ENV PATH=$PATHH
 
 CMD /home/ANT/ANT/bin/ant -buildfile /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool
-//CMD /home/ANT/ANT/bin/ant -buildfile /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_Globe_View
