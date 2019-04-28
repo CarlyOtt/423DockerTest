@@ -18,7 +18,7 @@ artifacts:
     location: 'gs://testing-stk-cis/test2'
     #paths: ['*.txt']
     #paths: ['report.txt', 'reportArea.txt']
-    paths: ['*,', *.*]
+    paths: ['*', *.*]
 
 
 #To store an image as part of your build flow and 
