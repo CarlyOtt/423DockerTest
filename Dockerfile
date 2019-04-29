@@ -50,4 +50,4 @@ ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.jar
 ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.swing.jar
 ENV CLASSPATH=$CLASS_PATH
 
-CMD /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool/src java -cp ".:/home/stk11.5.0/bin/agi.core.jar:agi.swing.jar" MainWindow.java
+CMD /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool/src java -cp ".:/home/stk11.5.0/bin/agi.core.jar:agi.swing.jar" Main.java
