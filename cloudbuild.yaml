@@ -10,8 +10,9 @@ steps:
   - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest'
   - '--file=Dockerfile'
   - '.'
-  - name: 'gcr.io/cloud-builders/docker'
-  id: runDockerfile
+  
+- name: 'gcr.io/cloud-builders/docker'
+  id: copyFiles
   volumes:
   - name: 'docker'
     path: '/wd'
@@ -20,11 +21,12 @@ steps:
   - '-t'
   - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
   - 'txt.txt'
+  
 - name: 'gcr.io/cloud-builders/gsutil'
   volumes:
   - name: 'docker'
     path: '/wd'
-  args: ['/wd/ls']
+  args: ['ls /wd']
 tags: ['testing1.2']
 images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
 #storing artifacts in Cloud Storage (creates it in Buckets under 'Storage')
