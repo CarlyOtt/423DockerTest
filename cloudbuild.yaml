@@ -5,6 +5,16 @@ steps:
   - name: 'docker'
     path: '/wd'
   args: ['ls', 'gs://testing-stk-cis/']
+- name: 'gcr.io/cloud-builders/gsutil'
+  volumes:
+  - name: 'docker'
+    path: '/wd'
+  args: ['ls', 'gs://artifacts.cpts423seniorproject.appspot.com/']
+- name: 'gcr.io/cloud-builders/gsutil'
+  volumes:
+  - name: 'docker'
+    path: '/wd'
+  args: ['ls', 'gs://cpts423seniorproject_cloudbuild/']
   
 - name: 'gcr.io/cloud-builders/docker'
   id: runDockerfile
