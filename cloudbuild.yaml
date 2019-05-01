@@ -4,7 +4,7 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:final'
+  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertestl'
   - '--file=Dockerfile'
   - '.'
 tags: ['testing1.2']
@@ -25,5 +25,5 @@ tags: ['testing1.2']
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   id: store image and display build results
-  args: ['push', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:final']
-images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:final']
+  args: ['push', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
+images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
