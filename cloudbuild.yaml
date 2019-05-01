@@ -11,6 +11,9 @@ steps:
   - '--file=Dockerfile'
   - '.'
 - name: 'gcr.io/cloud-builders/gsutil'
+  volumes:
+  - name: 'docker'
+    path: '/wd'
   args: ['/wd/ls']
 tags: ['testing1.2']
 images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
