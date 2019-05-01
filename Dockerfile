@@ -52,5 +52,5 @@ ENV CLASSPATH=$CLASS_PATH
 
 WORKDIR /home/OrbitalSimulationSuite/NoGraphics
 RUN ls
-RUN ant run >> txt.txt
+RUN ant run > txt.txt
 RUN cat txt.txt
