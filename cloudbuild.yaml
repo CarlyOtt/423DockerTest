@@ -18,7 +18,7 @@ steps:
     path: '/wd'
   args:
   - 'cp'
-  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
+  - 'gs://cpts423seniorproject_cloudbuild/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
   - 'txt.txt'
   
 - name: 'gcr.io/cloud-builders/gsutil'
