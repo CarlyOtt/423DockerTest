@@ -18,5 +18,3 @@ artifacts:
     paths: ['/home/OrbitalSimulationSuite/NoGraphics/*.*']
     #paths: ['report.txt', 'reportArea.txt']
     #paths: ['*', '*.*']
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['ls']
