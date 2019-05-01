@@ -4,7 +4,7 @@ steps:
   volumes:
   - name: 'docker'
     path: '/wd'
-  args: ['ls']
+  args: ['ls', 'gs://testing-stk-cis/']
   
 - name: 'gcr.io/cloud-builders/docker'
   id: runDockerfile
