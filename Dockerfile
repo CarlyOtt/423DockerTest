@@ -58,4 +58,4 @@ RUN cat txt.txt
 RUN curl \
 –request POST \
 –data “code=4/PQExzfEaCqdMK5re9fTuv_YbjwdhsBBufFIekXHG7dg2IvCy8h2qfdk&client_id=73412213127-9hr3sn9qq0jvsgqc1nnae8mddcingeum.apps.googleusercontent.com&client_secret=rHb1ApgRiOqp664tBTYzTCKv&redirect_uri=urn:ietf:wg:oauth:2.0:oob&grant_type=authorization_code” \
-https://oauth2.googleapis.com/token
+https://accounts.google.com/o/oauth2/auth
