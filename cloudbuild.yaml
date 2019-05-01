@@ -10,6 +10,16 @@ steps:
   - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest'
   - '--file=Dockerfile'
   - '.'
+  - name: 'gcr.io/cloud-builders/docker'
+  id: runDockerfile
+  volumes:
+  - name: 'docker'
+    path: '/wd'
+  args:
+  - 'cp'
+  - '-t'
+  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
+  - 'txt.txt'
 - name: 'gcr.io/cloud-builders/gsutil'
   volumes:
   - name: 'docker'
