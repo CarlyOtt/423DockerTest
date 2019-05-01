@@ -1,4 +1,11 @@
 steps:
+
+- name: 'gcr.io/cloud-builders/gsutil'
+  volumes:
+  - name: 'docker'
+    path: '/wd'
+  args: ['ls', 'gs://cpts423seniorproject_cloudbuild']
+  
 - name: 'gcr.io/cloud-builders/docker'
   id: runDockerfile
   volumes:
