@@ -51,5 +51,5 @@ ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.swing.jar
 ENV CLASSPATH=$CLASS_PATH
 
 WORKDIR /home/OrbitalSimulationSuite/NoGraphics
-RUN ll
+RUN ls
 RUN ant run >> txt.txt
