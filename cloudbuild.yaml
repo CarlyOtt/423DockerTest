@@ -1,6 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/gsutil'
   args: ['ls']
+  
 - name: 'gcr.io/cloud-builders/docker'
   id: runDockerfile
   args:
@@ -9,6 +10,8 @@ steps:
   - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest'
   - '--file=Dockerfile'
   - '.'
+- name: 'gcr.io/cloud-builders/gsutil'
+  args: ['ls']
 tags: ['testing1.2']
 images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
 #storing artifacts in Cloud Storage (creates it in Buckets under 'Storage')
@@ -19,5 +22,3 @@ artifacts:
     #paths: ['report.txt', 'reportArea.txt']
     #paths: ['*', '*.*']
     
-- name: 'gcr.io/cloud-builders/gsutil'
-  args: ['ls']
