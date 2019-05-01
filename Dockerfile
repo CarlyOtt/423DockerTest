@@ -50,4 +50,4 @@ ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.jar
 ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.swing.jar
 ENV CLASSPATH=$CLASS_PATH
 
-RUN sudo cd /home/OrbitalSimulationSuite/NoGraphics ant run >> txt.txt
+RUN /home/OrbitalSimulationSuite/NoGraphics ant run >> txt.txt
