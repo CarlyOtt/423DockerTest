@@ -55,11 +55,9 @@ RUN ls
 RUN ant run >> txt.txt
 RUN cat txt.txt
 
-WORKDIR /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxA
-nalysis_SolarPanelTool/src
+WORKDIR /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool/src
 RUN ls
 RUN java Main.java
-WORKDIR /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxA
-nalysis_SolarPanelToo
+WORKDIR /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelToo
 RUN cat Sat1_Area.txt
 RUN cat Sat1_Power.txt
