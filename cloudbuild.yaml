@@ -4,26 +4,15 @@ steps:
   args:
   - 'build'
   - '-t'
-  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertestl'
+  - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest'
   - '--file=Dockerfile'
   - '.'
 tags: ['testing1.2']
-#images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
+images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
 #storing artifacts in Cloud Storage (creates it in Buckets under 'Storage')
-#artifacts:
-  #objects:
-    #location: 'gs://testing-stk-cis/cpts423seniorproject'
-    #location: 'gs://testing-stk-cis/test1'
-    #location: 'gs://testing-stk-cis/test2'
-    #paths: ['/home/OrbitalSimulationSuite/NoGraphics/*.*']
+artifacts:
+  objects:
+    location: 'gs://testing-stk-cis/test2'
+    paths: ['/home/OrbitalSimulationSuite/NoGraphics/*.*']
     #paths: ['report.txt', 'reportArea.txt']
     #paths: ['*', '*.*']
-
-
-#To store an image as part of your build flow and 
-#to display the image in the build results:
-steps:
-- name: 'gcr.io/cloud-builders/docker'
-  id: store image and display build results
-  args: ['push', 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
-images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest']
