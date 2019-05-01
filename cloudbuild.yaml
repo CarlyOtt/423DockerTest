@@ -13,7 +13,7 @@ images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
 artifacts:
   objects:
     location: 'gs://testing-stk-cis/DEMO'
-    paths: ['txt.txt']
+    #paths: ['txt.txt']
     #paths: ['report.txt', 'reportArea.txt']
-    #paths: ['*', '*.*']
+    paths: ['*', '*.*']
     
