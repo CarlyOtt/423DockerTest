@@ -18,7 +18,7 @@ steps:
     path: '/wd'
   args:
   - 'cp'
-  - 'gs://cpts423seniorproject_cloudbuild/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
+  - 'gs://cpts423seniorproject_cloudbuild:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
   - 'txt.txt'
   
 - name: 'gcr.io/cloud-builders/gsutil'
