@@ -1,4 +1,4 @@
-FROM carlyishere/stk_cis:updated2
+FROM carlyishere/stk_cis:final
 
 ARG LDLIBRARYPATH=/home/stk11.5.0/bin:$LDLIBRARYPATH
 ENV LD_LIBRARY_PATH=$LDLIBRARYPATH
@@ -50,4 +50,4 @@ ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.jar
 ARG CLASS_PATH=${CLASS_PATH}:/home/stk11.5.0/bin/agi.stk.core.swing.jar
 ENV CLASSPATH=$CLASS_PATH
 
-CMD /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelTool/src java -cp ".:/home/stk11.5.0/bin/agi.core.jar:agi.swing.jar" Main.java
+CMD /home/OrbitalSimulationSuite/NoGraphics ant run >> txt.txt
