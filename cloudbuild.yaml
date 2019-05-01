@@ -9,7 +9,7 @@ steps:
   volumes:
   - name: 'docker'
     path: '/wd'
-  args: ['ls', 'gs://artifacts.cpts423seniorproject.appspot.com/']
+  args: ['ls', 'gs://artifacts.cpts423seniorproject.appspot.com/containers/']
 - name: 'gcr.io/cloud-builders/gsutil'
   volumes:
   - name: 'docker'
