@@ -1,42 +1,12 @@
 steps:
-
-- name: 'gcr.io/cloud-builders/gsutil'
-  volumes:
-  - name: 'docker'
-    path: '/wd'
-  args: ['ls', 'gs://testing-stk-cis/test2/']
-- name: 'gcr.io/cloud-builders/gsutil'
-  volumes:
-  - name: 'docker'
-    path: '/wd'
-  args: ['ls', 'gs://artifacts.cpts423seniorproject.appspot.com/containers/images/']
-- name: 'gcr.io/cloud-builders/gsutil'
-  volumes:
-  - name: 'docker'
-    path: '/wd'
-  args: ['ls', 'gs://cpts423seniorproject_cloudbuild/']
-  
 - name: 'gcr.io/cloud-builders/docker'
   id: runDockerfile
-  volumes:
-  - name: 'docker'
-    path: '/wd'
   args:
   - 'build'
   - '-t'
   - 'gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest'
   - '--file=Dockerfile'
   - '.'
-  
-- name: 'gcr.io/cloud-builders/docker'
-  id: copyFiles
-  volumes:
-  - name: 'docker'
-    path: '/wd'
-  args:
-  - 'cp'
-  - 'gs://cpts423seniorproject_cloudbuild:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
-  - 'txt.txt'
 tags: ['testing1.2']
 images: ['gcr.io/cpts423seniorproject/github.com/carlyott/423dockertest:latest']
 #storing artifacts in Cloud Storage (creates it in Buckets under 'Storage')
