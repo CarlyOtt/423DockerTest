@@ -59,5 +59,5 @@ WORKDIR /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysi
 RUN ls
 RUN java Main.java
 WORKDIR /home/stk11.5.0/CodeSamples/CustomApplications/Java/AWT_STK_X_GfxAnalysis_SolarPanelToo
-RUN cat Sat1_Area.txt
 RUN cat Sat1_Power.txt
+RUN cat Sat1_Area.txt
