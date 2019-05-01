@@ -24,9 +24,11 @@ steps:
   - name: 'docker'
     path: '/wd'
   args:
-  - 'cp'
-  - 'gs://cpts423seniorproject_cloudbuild:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
-  - 'txt.txt'
+  - 'container'
+  - 'ls'
+  #- 'cp'
+  #- 'gs://cpts423seniorproject_cloudbuild:/home/OrbitalSimulationSuite/NoGraphics/txt.txt'
+  #- 'txt.txt'
   
 - name: 'gcr.io/cloud-builders/gsutil'
   volumes:
